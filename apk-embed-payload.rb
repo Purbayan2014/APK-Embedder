@@ -1,10 +1,4 @@
 #!/usr/bin/env ruby
-# apk_backdoor.rb
-# This script is a POC for injecting metasploit payloads on 
-# arbitrary APKs.
-# Authored by timwr, Jack64
-#
-
 
 require 'nokogiri'
 require 'fileutils'
