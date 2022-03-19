@@ -2,7 +2,7 @@
 
 require 'nokogiri'
 require 'fileutils'
-require 'optparse'
+require 'optparse' 
 
 # Find the activity thatapk_backdoor.rb  is opened when you click the app icon
 def findlauncheractivity(amanifest)
