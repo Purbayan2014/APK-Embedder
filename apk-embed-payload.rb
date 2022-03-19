@@ -6,7 +6,7 @@ require 'optparse'
 
 # Find the activity thatapk_backdoor.rb  is opened when you click the app icon
 def findlauncheractivity(amanifest)
-    package = amanifest.xpath("//manifest").first['package']
+    package = amanifest.xpath("//manifest").first['package'] 
     activities = amanifest.xpath("//activity|//activity-alias")
     for activity in activities 
         activityname = activity.attribute("name")
